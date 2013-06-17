@@ -80,8 +80,9 @@
     <Compile Include="Model\Vehicle.cs" />
     <Compile Include="Model\WeightValues.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\IdNotFoundException.cs" />
     <Compile Include="Repository\Repository.cs" />
-    <Compile Include="Repository\RepositoryOperations.cs" />
+    <Compile Include="Repository\OperatorRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

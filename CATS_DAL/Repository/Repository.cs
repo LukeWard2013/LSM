@@ -1,9 +1,5 @@
-﻿
-using System;
-using System.Collections;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
-using System.Linq;
 using CATS_DAL.Model;
 
 namespace CATS_DAL.Repository
@@ -15,9 +11,14 @@ namespace CATS_DAL.Repository
         public Repository()
         {
             //Use SQL Compact for testing
-            Database.DefaultConnectionFactory = new SqlCeConnectionFactory("System.Data.SqlServerCe.4.0",
-                                                                           @"..\Repository", "");
             Db = new CatsDatabaseContext();
+        }
+
+        public TEntity FindById(int id)
+        {
+            TEntity entity = Db.Set<TEntity>().Find(id);
+            if (entity == null) throw new IdNotFoundException("The Id to delete was not found.");
+            return entity;
         }
 
         public int Save(TEntity entity)

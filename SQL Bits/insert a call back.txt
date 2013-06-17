@@ -1,0 +1,5 @@
+insert into dbo.tblCall_Data 
+(CATS_ID,Call_Back_Date,Operative,Interview_Start,Interview_End,Notes,Current_Call,Record_Status,Reason)
+values
+(3, '01/01/2013 14:00', 1, convert(datetime,'01/01/2013 14:00',103), convert(datetime,'01/01/2013 14:12',103), '', 1, 1, 2)
+

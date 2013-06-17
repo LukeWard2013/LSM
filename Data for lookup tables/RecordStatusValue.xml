@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RecordStatus>
+  <RecordStatusId>1</RecordStatusId>
+  <RecordStatus>Bronze</RecordStatus>
+</RecordStatus>
+<RecordStatus>
+  <RecordStatusId>2</RecordStatusId>
+  <RecordStatus>Silver</RecordStatus>
+</RecordStatus>
+<RecordStatus>
+  <RecordStatusId>3</RecordStatusId>
+  <RecordStatus>Gold</RecordStatus>
+</RecordStatus>

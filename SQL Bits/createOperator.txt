@@ -1,0 +1,41 @@
+
+select top 20
+'OperatorId=' + cast(PrimaryID as VARCHAR(20)) + ',',
+'CompanyName=' + char(34) +  CompanyName_VC + char(34) + ',',
+'CareOfCompanyName=' + char(34) + 'Care of company name' + char(34)+ ',',
+'Address1=' + char(34) + Address1_VC + char(34) + ',',
+'Address2=' + char(34) + Address2_VC + char(34) + ',',
+'Address3=' + char(34) + Address3_VC + char(34) + ',',
+'Address4=' + char(34) + isnull(Address4_VC,'') + char(34) + ',',
+'Town=' + char(34) + Town_VC + char(34) + ',',
+'County=' + char(34) + County_VC + char(34) + ',',
+'Postcode=' + char(34) + Postcode_VC + char(34) + ',',
+'TelephoneSTD=' + char(34) + TeleSTD_VC + char(34) + ',',
+'TelephoneNumber=' + char(34) + Tele_VC + char(34) + ',',
+'FaxStd=' + char(34) + FaxSTD_VC + char(34) + ',',
+'FaxNumber=' + char(34) + Fax_VC + char(34) + ',',
+'WebAddress=' + char(34) + isnull(Web_VC,'') + char(34) + ',',
+'IntervieweeEmail=' + char(34) + isnull(Email_VC,'') + char(34) + ',',
+'CompanyEmail=' + char(34) + isnull(CompEmail_VC,'') + char(34) + ',',
+'PafCompanyName=' + char(34) + isnull(PAF_CompanyName_VC, '') + char(34) + ',',
+'PafAddress1=' + char(34) + isnull(PAF_Address1_VC,'') + char(34) + ',',
+'PafAddress2=' + char(34) + isnull(PAF_Address2_VC, '') + char(34) + ',',
+'PafAddress3=' + char(34) + isnull(PAF_Address3_VC, '') + char(34) + ',',
+'PafAddress4=' + char(34) + isnull(PAF_Address4_VC, '') + char(34) + ',',
+'PafTown=' + char(34) + isnull(PAF_Town_VC, '') + char(34) + ',',
+'PafCounty=' + char(34) + isnull(PAF_County_VC, '') + char(34) + ',',
+'PafPostcode=' + char(34) + isnull(PAF_Postcode_VC, '') + char(34) + ',',
+'PafTelephoneNumber=' + char(34) + isnull(PAF_Telephone_VC, '') + char(34) + ',',
+'Tps=false,',
+'Fps=false,',
+'SiteType=' + cast(round(rand()*4,0)+1 as varchar(10)) + ',',
+'TruckStatus=' + cast(round(rand()*4,0)+1 as varchar(10)) + ',',
+'Below7500Kg=true,',
+'OLicenseExpiry=' + 'new DateTime(2013, 12, 25)' + ',',
+'CurrentOLicense=true,',
+'InternationalLicense=false'
+
+from tblCATS
+
+
+
